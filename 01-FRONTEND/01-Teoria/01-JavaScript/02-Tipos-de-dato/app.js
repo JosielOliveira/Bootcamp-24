@@ -42,11 +42,42 @@ console.log(mayuscula.toLowerCase()); // "hola"
 let minuscula = "adios";
 console.log(minuscula.toUpperCase()); // "ADIOS
 
-//? tiFixed() --> redondea en enteros o decimales segun le indiquemos
+//? includes() --> comprueba si un caracter o una palabra esta incluida en un string
+// devuelve un boolean --> true o false
+
+//! ----- DIA 19/09 ---------
+
+//? Repeat() ---> devuelve un nuevo STRING con el numero de copias que le indiquemos
+const mascota = "perro";
+console.log(mascota.repeat(3)); // perroperroperro
+
+//? replace() ---> reemplaza unos caracteres   por otros
+const nuevoCoche = "Audi A4";
+console.log(nuevoCoche.replace("A4", "A3")); // Audi A3 
+
+//? replaceAll() ---> reemplaza todos los  iguales por los que le indiquemos
+// cambia todos los que se encuentre igual
+const cita = "Tres tristes tigres estan tristes";
+console.log(cita.replaceAll("tristes", "felices")); // Tres felices tigres estan felices
+
+//! ------- hasta aqui --------
+
+//? toFixed() --> redondea en enteros o decimales segun le indiquemos
 
 let numero = 10.692347;
 console.log(numero.toFixed()); // --> redondea a 11 
 console.log(numero.toFixed(3)); // --> devuelve el numero con 3 decimales y lo redondea ej: 10.692
+
+
+//? parseInt() --> convierte un valor de tipo STRING a NUMBER
+const precioString = "200";
+console.log(parseInt(precioString));
+
+//* NaN ---> Not a Number *//
+// entidades no NUMERICAS, valores que no son NUMBER aunque lleven dentro un numero
+
+console.log(isNaN("bootcamp"));
+
 
 // EJERCICIO ---> formar una frase con las tres variables
 
@@ -59,3 +90,9 @@ let frase =
 console.log ()
 
 // usamos `` para poder encapsular con ${variable} variables y unirlas
+
+console.log(5 + 5);
+console.log("hola" + "hola");
+
+
+
