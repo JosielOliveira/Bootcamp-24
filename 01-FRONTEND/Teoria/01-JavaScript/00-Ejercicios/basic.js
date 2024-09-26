@@ -53,8 +53,6 @@ car2.finalPrice = car2.basePrice + globalBasePrice;
 // console.log(car1); --> 'BMW m&m', basePrice: 50000, finalPrice: 75000
 // console.log(car2); --> 'Chevrolet Corbina', basePrice: 70000, finalPrice: 95000
 
-
-
 //! EJERCICIO 3 --> Variables avanzadas *//
 
 //* 1.1 Multiplica 10 por 5 y muestra el resultado mediante console. *//
