@@ -46,7 +46,7 @@ console.log(coleccion.length); // 7 --> devuelve la longitud del array
 
 //! --- Métodos de arrays --- /
 
-//// push()
+//* push()
 // añade elementos al final del array
 // devuelve la nueva longitud del array
 // modifica el array añadiendo elementos
@@ -55,7 +55,7 @@ let frutas = ['kiwi', 'granada'];
 frutas.push('platano'); // 3 --> el método devuelve la nueva longitud del array
 console.log(frutas); // [ 'kiwi', 'granada', 'platano' ] --> después del método añade el elemento al array
 
-//// pop()
+//* pop()
 // elimina y devuelve el último elemento del array
 // modifica el array
 
@@ -64,7 +64,7 @@ let ultimoCoche = coches.pop();
 console.log(coches); // [ 'audi', 'volkswagen' ] --> elimina el último elemento del array
 console.log(ultimoCoche); // seat --> devuelve ese elemento eliminado
 
-//// unshift()
+//* unshift()
 // añade elementos al inicio del array
 // modifica el array
 // devuelve la longitud del array modificado con el nuevo elemento
@@ -74,7 +74,7 @@ console.log(comida.unshift('tortitas')); // 4
 console.log(comida); // [ 'tortitas', 'fruta', 'pastel', 'lentejas' ]
 
 
-//// shift()
+//* shift()
 // elimina y devuelve el primer elemento del array
 // modifica el array
 
@@ -83,7 +83,7 @@ console.log(automoviles.shift()); // moto
 console.log(automoviles); // [ 'bus', 'coche' ]
 
 
-//// slice()
+//* slice()
 // devuelve una copia de una parte del array
 // no modifica el array original, hace una copia
 // necesita dos parámetros --> inicio y fin
@@ -95,7 +95,7 @@ console.log(ropa); // [ 'camisa', 'calcetines', 'abrigo', 'zapatos', 'bolso' ]
 console.log(menosRopa); // [ 'calcetines', 'abrigo' ]
 
 
-//// splice()
+//* splice()
 // elimina y/o añade elementos en el indice (index) que le indiquemos
 // devuelve el/los elemento/s que elimina
 // modifica el array original
@@ -117,7 +117,7 @@ console.log(paises); // [ 'España', 'EEUU', 'Portugal', 'Francia', 'Alemania', 
 console.log(nuevosPaises); // [] --> devuelve un array vacio porque no le he dicho que elimina nada
 
 
-//// concat()
+//* concat()
 // combina/une/concatena dos o más arrays en un nuevo array
 // no modifica los arrays originales
 // crea un nuevo array 
@@ -133,7 +133,7 @@ let unirTres = a.concat(b,c); // [ 1, 2, 3, 4, 5, 6, 7, 8, 9 ]
 console.log(unirTres);
 
 
-//// forEach()
+//* forEach()
 // ejecuta una función que le damos, en cada elemento del array
 // recorre todo el array y va aplicando en cada elemento la tarea que le digamos, uno a uno
 // tiene como parámetro una función y ejecuta esa función en cada elemento del array
@@ -163,7 +163,7 @@ let sumaUno = masUno.forEach(
 // Resultado 51
 
 
-//// find()
+//* find()
 // devuelve el PRIMER elemento que cumple la condición que le pedimos
 // necesita una instrucción y una condición para encontrar qué elemento la cumple
 // no modifica el array original, me da un resultado
@@ -180,7 +180,7 @@ let primerPar = nums.find(
 console.log(primerPar); // 4 --> es el primer par que se ha encontrado que cumple nuestra condición
 
 
-//// every()
+//* every()
 // comprueba si TODOS los elementos del array cumple una condición
 // devuelve un dato boolean --> true o false
 // no modifica el array original ya que solo lo comprueba y devuelve T o F
@@ -194,7 +194,7 @@ let todosPares = pares.every(
 )
 console.log(todosPares); // true --> todos los números del array son pares, todos cumplen nuestra condición
 
-//// some()
+//* some()
 // comprueba si AL MENOS UN elemento del array cumple una condición
 // devuelve un dato boolean --> true o false
 // no modifica el array original ya que solo lo comprueba y devuelve T o F
@@ -208,7 +208,7 @@ let algunPar = numbers.some(
 console.log(algunPar); // true ---> hay al menos un número par en este array
 
 
-//// filter()
+//* filter()
 // crea un nuevo array, no modifica el array original
 // devuelve el nuevo array con los elementos que cumplen una condición
 
@@ -222,7 +222,7 @@ console.log(todosImpares); // [ 1, 3, 5 ] --> devuelve un nuevo array con los im
 console.log(todos); // [ 1, 2, 3, 4, 5, 6 ] --> no modifica el array original
 
 
-//// reduce()
+//* reduce()
 // ejecuta una función acumuladora a un array, recorre todo el array
 // reduce el array a un único valor
 // necesita una función y un valor inicial ---> reduce(funcion(acumulador, valorActual), valorInicial)
@@ -249,7 +249,7 @@ Después realiza la función con cada elemento del array
 Termina de recorrer todo el array nos da el resultado del valorActual final que es 310
 */
 
-//// Array.from()
+//* Array.from()
 // crea un array a partir de un dato
 // puedo o no usar una función dentro de este método, puede tener más de un parámetro
 // usamos la sintaxis Array.from(DATO) --> usamos el dato que queremos convertir en array como parámetro del método
@@ -278,7 +278,7 @@ console.log(original == copia); // false
 
 
 
-//// map()
+//* map()
 // crea un nuevo array y aplica una función a todos los elementos de otro array
 // no modifica el array original
 

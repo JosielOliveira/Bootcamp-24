@@ -7,10 +7,10 @@ let y = 10;
 let z = h + y; 
 // console.log(z); // 15
 
+
 //! EJERCICIO 2 --> Variables avanzadas 
 
-/* 1.1 --> Dado el siguiente javascript, cambia el valor de la propiedad age a 25. 
-const character = {name: 'Jack Sparrow', age: 10}; */
+//* 1.1 --> Dado el siguiente javascript, cambia el valor de la propiedad age a 25. const character = {name: 'Jack Sparrow', age: 10};
 
 const character = {name: "Jack Sparrow", age: 10}
 character.age = 25; //cambio el valor de la propiedad "age" a 25 
@@ -53,6 +53,7 @@ car2.finalPrice = car2.basePrice + globalBasePrice;
 // console.log(car1); --> 'BMW m&m', basePrice: 50000, finalPrice: 75000
 // console.log(car2); --> 'Chevrolet Corbina', basePrice: 70000, finalPrice: 95000
 
+
 //! EJERCICIO 3 --> Operadores 
 
 //* 1.1 Multiplica 10 por 5 y muestra el resultado mediante console. *//
@@ -81,30 +82,41 @@ let i = c;
 i *= m;
 // console.log(i); --> 50
 
+
 //! EJERCICIO 3 --> Arrays
 
-/* 1.1 Consigue el valor "HULK" del array de avengers y muestralo por consola.*/ 
-
+//* 1.1 Consigue el valor "HULK" del array de avengers y muestralo por consola. 
 // const avengers = ["HULK", "SPIDERMAN", "BLACK PANTHER"];
-// console.log(avengers[0]);
+// console.log(avengers[0]); // HULK
 
 
-/* 1.2 Cambia el primer elemento de avengers a "IRONMAN" */
-const avengers = ["HULK", "SPIDERMAN", "BLACK PANTHER"]; 
-avengers[0] = "IRONMAN";
-console.log(avengers);
+//* 1.2 Cambia el primer elemento de avengers a "IRONMAN"
+//const avengers = ["HULK", "SPIDERMAN", "BLACK PANTHER"]; 
+// avengers[0] = "IRONMAN";
+// console.log(avengers); // IRONMAN 
 
 
 /* 1.3 console numero de elementos en el array usando la propiedad correcta de Array.
-const avengers = ["HULK", "SPIDERMAN", "BLACK PANTHER"]; */
+const avengers = ["HULK", "SPIDERMAN", "BLACK PANTHER"]; 
+console.log(avengers.length); // 3 */
 
-/* 1.4 Añade 2 elementos al array: "Morty" y "Summer". 
-Muestra en consola el último personaje del array
-const rickAndMortyCharacters = ["Rick", "Beth", "Jerry"]; */
+
+/* 1.4 Añade 2 elementos al array: "Morty" y "Summer". Muestra en consola el último personaje del array
+const rickAndMortyCharacters = ["Rick", "Beth", "Jerry"];
+rickAndMortyCharacters.push("Morty", "Summer");
+console.log(rickAndMortyCharacters[rickAndMortyCharacters.length -2]); // Summer */
+
 
 /* 1.5 Elimina el último elemento del array y muestra el primero y el último por consola.
-const rickAndMortyCharacters = ["Rick", "Beth", "Jerry", "Morty", "Summer", "Lapiz Lopez"]; */
+const rickAndMortyCharacters = ["Rick", "Beth", "Jerry", "Morty", "Summer", "Lapiz Lopez"];
+ultimoNombre = rickAndMortyCharacters.pop();
+console.log("Primer nombre:", rickAndMortyCharacters[0]); // Primer nombre: Rick
+console.log("Ultimo nombre:", rickAndMortyCharacters[rickAndMortyCharacters.length -1]); // Ultimo nombre: Summer */
 
-/* 1.6 Elimina el segundo elemento del array y muestra el array por consola.
-const rickAndMortyCharacters = ["Rick", "Beth", "Jerry", "Morty", "Summer", "Lapiz Lopez"]; */
+
+//* 1.6 Elimina el segundo elemento del array y muestra el array por consola.
+const rickAndMortyCharacters = ["Rick", "Beth", "Jerry", "Morty", "Summer", "Lapiz Lopez"];
+rickAndMortyCharacters.splice(1, 1);
+console.log(rickAndMortyCharacters); // [ 'Rick', 'Jerry', 'Morty', 'Summer', 'Lapiz Lopez' ]
+
 
