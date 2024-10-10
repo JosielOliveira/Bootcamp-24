@@ -111,13 +111,3 @@ const toys = [
 	{id: 40, name: 'El gato felix', sellCount: 35}
 ]
 
-    //! EJERCICIO 1 --> 
-
-
-
-    //! EJERCICIO 1 -->
-
-
-
-
-    //! EJERCICIO 1 -->
