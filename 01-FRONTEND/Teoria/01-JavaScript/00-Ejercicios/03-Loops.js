@@ -60,15 +60,34 @@ alumns.forEach(alumno => {
     if (alumno.T3) aprobados++;
 
     alumno.isApproved = aprobados >= 2;
+    console.log(alumns);
 });
 
 /* Paso 4: Mostrar los resultados con console.log Una vez que hemos recorrido todos los alumnos 
 y añadido la propiedad isApproved, mostramos el array alumns para verificar el resultado: */
 
-console.log(alumns);
+
+
 
 //! EJERCICIO 3 --> Probando For...of
 
+/* Usa un bucle forof para recorrer todos los destinos del array. Imprime en un console.log 
+sus valores. Puedes usar este array: */
+
+/* Paso 1: Entender el bucle for...of: Se utiliza para recorrer elementos de un array de 
+manera sencilla, asignando cada elemento a una variable en cada iteración del bucle. */
+
+/* Paso 2: Crear y definir el array que contiene los destinos: */
+
+const placesToTravel = ['Japon', 'Venecia', 'Murcia', 'Santander', 'Filipinas', 'Madagascar']
+
+/* Paso 3: Usar el bucle for...of para recorrer cada destino del array placesToTravel 
+usando for...of e imprimir en la consola: */
+
+for (const place of placesToTravel) {
+    console.log(place);
+    
+}
 
 
 //! EJERCICIO 4 --> Probando For...in
