@@ -163,11 +163,84 @@ placesToTravel.splice(i, 1): Si la condición se cumple, elimina el elemento en 
 
 //! EJERCICIO 6 --> Mixed For...of e includes 
 
+/* Usa un bucle for...of para recorrer todos los juguetes y elimina los que incluyan la 
+palabra gato. Recuerda que puedes usar la función .includes() para comprobarlo.
+Puedes usar este array: */
 
+/* Paso 1 --> Declarar el array dado */
+
+const toys = [
+{id: 5, name: 'Buzz MyYear'}, 
+{id: 11, name: 'Action Woman'}, 
+{id: 23, name: 'Barbie Man'}, 
+{id: 40, name: 'El gato con Guantes'},
+{id: 40, name: 'El gato felix'}
+] 
+
+/* Paso 2 --> Crear un nuevo array para almacenar los juguetes que NO incluyan la palabra 
+"gato": A medida que recorremos el array toys, si un juguete no contiene la palabra "gato" 
+en su propiedad name, lo agregaremos al nuevo array. */
+
+const filteredToys = [];
+
+/* Paso 3 --> Recorrer el array con for...of: Vamos a usar for...of para recorrer cada 
+objeto del array toys. */
+
+for (const toy of toys) {
+        // Aquí evaluaremos cada juguete. Lo copio al siguiente paso:
+}
+
+/* Paso 4 --> Comprobar si el nombre del juguete incluye la palabra "gato": Usamos el método 
+.includes() para verificar si el nombre del juguete contiene la palabra "gato".
+Si el nombre NO incluye "gato", agregamos ese juguete al array filteredToys.*/
+
+for (const toy of toys) {
+    if (!toy.name.includes('gato')) {
+        filteredToys.push(toy);
+    }
+}
+
+console.log(filteredToys);
 
 
 //! EJERCICIO 7 --> For...of avanzado
 
+/* Usa un bucle for...of para recorrer todos los juguetes y añade los que tengan más de 
+15 ventas (sellCount) al array popularToys. Imprimelo por consola.. 
+Puedes usar este array: */
 
+/* OBJETIVO --> El objetivo es recorrer un array de objetos usando un bucle for...of y 
+agregar aquellos objetos cuyo sellCount sea mayor a 15 al array popularToys. Luego, 
+imprimiremos el resultado por consola. */
 
+/* Paso 1 --> Declarar el array de juguetes y el array vacío popularToys: 
+toys1 contendrá los juguetes con sus propiedades.
+popularToys será el array donde almacenaremos los juguetes que tengan más de 15 ventas. */
 
+const popularToys = [];
+const toys1 = [
+	{id: 5, name: 'Buzz MyYear', sellCount: 10}, 
+	{id: 11, name: 'Action Woman', sellCount: 24}, 
+	{id: 23, name: 'Barbie Man', sellCount: 15}, 
+	{id: 40, name: 'El gato con Guantes', sellCount: 8},
+	{id: 40, name: 'El gato felix', sellCount: 35}
+];
+
+/* Paso 2 --> Recorrer el array toys1 con un bucle for...of: 
+Usaremos for...of para iterar sobre cada objeto (juguete) en toys1. */
+
+for (const toy of toys1) {
+    // Aquí evaluaremos cada juguete. Lo copio al siguiente paso:
+}
+
+/* Paso 3 --> Comprobar si sellCount es mayor a 15:
+Usaremos una condición if para verificar si la propiedad sellCount del juguete es mayor a 15.
+Si cumple la condición, lo añadimos al array popularToys usando push(). */ 
+
+for (const toy of toys1) {
+    if (toy.sellCount > 15) {
+        popularToys.push(toy);
+    }
+}
+
+console.log(popularToys);
