@@ -1,0 +1,16 @@
+h2 {
+    text-decoration: underline; /* Subrayar el título */
+}
+
+#greetButton {
+    background-color: blue; /* Color de fondo azul */
+    color: white; /* Color del texto blanco */
+    border: none; /* Sin borde */
+    padding: 10px 15px; /* Espaciado interno */
+    font-size: 16px; /* Tamaño de fuente */
+    cursor: pointer; /* Cambiar cursor al pasar sobre el botón */
+}
+
+#greetButton:hover {
+    background-color: darkblue; /* Color de fondo más oscuro al pasar el mouse */
+}
