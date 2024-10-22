@@ -3,7 +3,8 @@ h2 {
 }
 
 #greetButton {
-    background-color: blue; /* Color de fondo azul */
+    background-color: rgb(46, 46, 255); /* Color de fondo azul */
+    border-radius: 10px; /* Bordes redondeados */
     color: white; /* Color del texto blanco */
     border: none; /* Sin borde */
     padding: 10px 15px; /* Espaciado interno */

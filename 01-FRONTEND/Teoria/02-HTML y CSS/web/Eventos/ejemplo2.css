@@ -1,0 +1,17 @@
+h2 {
+    text-decoration: underline; /* Subrayar el título */
+}
+
+#saludarBtn {
+    background-color: rgb(255, 140, 46); /* Color de fondo azul */
+    border-radius: 10px; /* Bordes redondeados */
+    color: white; /* Color del texto blanco */
+    border: none; /* Sin borde */
+    padding: 10px 15px; /* Espaciado interno */
+    font-size: 16px; /* Tamaño de fuente */
+    cursor: pointer; /* Cambiar cursor al pasar sobre el botón */
+}
+
+#saludarBtn:hover {
+    background-color: rgb(139, 51, 0); /* Color de fondo más oscuro al pasar el mouse */
+}
