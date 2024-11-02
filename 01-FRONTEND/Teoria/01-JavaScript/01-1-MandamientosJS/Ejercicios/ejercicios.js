@@ -68,10 +68,11 @@ function cleanMessage() {
         .split(" ")
         .map(word => word.charAt(0).toUpperCase() + word.slice(1).toLowerCase())
         .join(" ");
-    console.log(titleCaseMessage);  
+    console.log(titleCaseMessage); 
 }
 
 cleanMessage();
+
 
 
 //! Ejercicio 3: Extraer y reestructurar datos de una lista de personajes
@@ -85,3 +86,21 @@ Tienes una lista de nombres de personajes en formato CSV, guardada en la variabl
 3. Si el nombre "Yoda" está en la lista, reemplázalo con "Master Yoda" en el array.
 4. Vuelva a unir el array en un string separado por guiones ("-") usando `.join("-")`.
 5. Imprima el resultado final. */ 
+
+// Paso 1: Dividir el string en un array
+// Paso 2: Verificar si el array contiene "Yoda"
+// Paso 3: Reemplazar "Yoda" con "Master Yoda"
+// Paso 4: Unir el array en un string separado por guiones
+
+function processCharacters() {
+    let charactersCSV = "Luke,Leia,Josiel Skywalker,Han,Yoda";
+    let characterArray = charactersCSV.split(",");
+    if (characterArray.includes("Yoda")){
+        let yodaIndex = characterArray.indexOf("Yoda");
+        characterArray[yodaIndex] = "Master Yoda";
+    }
+    let result = characterArray.join(" - ");
+    console.log(result);
+    
+}
+processCharacters();
