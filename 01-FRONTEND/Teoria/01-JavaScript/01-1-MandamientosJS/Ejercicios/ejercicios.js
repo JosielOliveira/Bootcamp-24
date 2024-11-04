@@ -75,7 +75,7 @@ cleanMessage();
 
 
 
-//! Ejercicio 3: Extraer y reestructurar datos de una lista de personajes
+//! Ejercicio 2.1: Extraer y reestructurar datos de una lista de personajes
 
 /* Enunciado: 
 
@@ -104,3 +104,86 @@ function processCharacters() {
     
 }
 processCharacters();
+
+
+//? MÁS EJERCICIOS A PARTIR DEL 3:
+//! Ejercicio 3 
+
+const starWarsInfo = {
+    movie: {
+      title: "A New Hope",
+      release_year: 1977,
+      director: "George Lucas",
+      characters: {
+        main: {
+          name: "Luke Skywalker",
+          homeworld: "Tatooine",
+          species: "Human",
+          allies: ["Han Solo", "Leia Organa", "Obi-Wan Kenobi"],
+        },
+        villain: {
+          name: "Darth Vader",
+          homeworld: "Tatooine",
+          species: "Human",
+          allies: ["Emperor Palpatine"],
+        },
+      },
+    },
+  };
+  
+  
+
+
+// Enunciado
+// Queremos acceder al nombre del director de la película.
+
+function director(data) {
+    const nameDirector = data.movie.director; 
+    console.log(nameDirector);
+
+}
+director(starWarsInfo);
+
+//! Ejercicio 4
+
+/* Ejercicio 1: Listar todas las películas y sus años de estreno**
+Enunciado
+Queremos crear una función que imprima cada título de película y su año de estreno en la consola. */
+
+const starWarsData = {
+  characters: [
+    { name: "Luke Skywalker", height: 172, mass: 77, species: "Human" },
+    { name: "Darth Vader", height: 202, mass: 136, species: "Human" },
+    { name: "Yoda", height: 66, mass: 17, species: "Unknown" },
+  ],
+};
+
+//! Ejercicio 5
+
+/* Cambiar la especie de Darth Vader a "Sith" si su nombre es "Anakin Skywalker"
+Enunciado 
+Queremos cambiar la especie de Darth Vader a "Sith", pero solo si su nombre es "Anakin 
+Skywalker". */
+
+function actualizarEspecie(info) {
+    const villain = info.movie.characters.villain;
+
+    if (villain.name === "Anakin Skywalker") {
+        villain.species = "Sith";
+    }
+}
+
+actualizarEspecie(starWarsInfo)
+console.log("🚀 ~ starWarsData:", starWarsInfo)
+
+
+
+//! Ejercicio 6 
+
+/* Cambiar el estatus de Darth Vader y añadir un nuevo aliado a Luke Skywalker
+Enunciado
+Queremos actualizar algunos datos en el JSON starWarsInfo si se cumplen ciertas condiciones. Aquí están los requisitos específicos:
+Cambiar el species de Darth Vader a "Sith Lord" y añadir "Boba Fett" a su lista de aliados, pero solo si su name es "Darth Vader" y su homeworld es "Tatooine".
+Si Luke Skywalker tiene un aliado llamado "Obi-Wan Kenobi" en su lista, añade también a "Yoda" como su aliado.
+Verificar si el director de la película es "George Lucas" y, de ser así, añadir una nueva propiedad producer con el valor "Lucasfilm" en el nivel de la película.
+Bonus: Si el release_year es anterior a 1980, cambiar el title de la película a "Star Wars: Episode IV - A New Hope". */
