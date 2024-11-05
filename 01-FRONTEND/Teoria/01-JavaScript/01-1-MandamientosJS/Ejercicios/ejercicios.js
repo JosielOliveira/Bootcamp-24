@@ -177,7 +177,6 @@ actualizarEspecie(starWarsInfo)
 console.log("🚀 ~ starWarsData:", starWarsInfo)
 
 
-
 //! Ejercicio 6 
 
 /* Cambiar el estatus de Darth Vader y añadir un nuevo aliado a Luke Skywalker
@@ -187,3 +186,4 @@ Cambiar el species de Darth Vader a "Sith Lord" y añadir "Boba Fett" a su lista
 Si Luke Skywalker tiene un aliado llamado "Obi-Wan Kenobi" en su lista, añade también a "Yoda" como su aliado.
 Verificar si el director de la película es "George Lucas" y, de ser así, añadir una nueva propiedad producer con el valor "Lucasfilm" en el nivel de la película.
 Bonus: Si el release_year es anterior a 1980, cambiar el title de la película a "Star Wars: Episode IV - A New Hope". */
+
