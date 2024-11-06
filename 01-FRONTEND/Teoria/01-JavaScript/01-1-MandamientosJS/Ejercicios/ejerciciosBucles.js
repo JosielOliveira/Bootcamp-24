@@ -52,15 +52,15 @@ planeta natal (`homeworld`) y especie de cada personaje. */
 
 
 
-/* Ejercicio 4: Listar nombres y modelos de todas las naves**
+/* Ejercicio 4: Listar nombres y modelos de todas las naves
 Enunciado
 Queremos una función que recorra todas las películas y liste el `name` y `model` de 
 cada nave en esa película. */
 
 
 
-/* Ejercicio 5: Crear un resumen de personajes por especie**
-#### Enunciado
+/* Ejercicio 5: Crear un resumen de personajes por especie
+Enunciado
 Queremos una función que recorra todas las películas y agrupe los personajes por especie 
 en un objeto. */
 

@@ -148,7 +148,8 @@ director(starWarsInfo);
 
 /* Ejercicio 1: Listar todas las películas y sus años de estreno**
 Enunciado
-Queremos crear una función que imprima cada título de película y su año de estreno en la consola. */
+Queremos crear una función que imprima cada título de película y su 
+año de estreno en la consola. */
 
 const starWarsData = {
   characters: [
@@ -167,7 +168,6 @@ Skywalker". */
 
 function actualizarEspecie(info) {
     const villain = info.movie.characters.villain;
-
     if (villain.name === "Anakin Skywalker") {
         villain.species = "Sith";
     }
