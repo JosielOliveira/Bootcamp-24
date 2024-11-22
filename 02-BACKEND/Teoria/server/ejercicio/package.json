@@ -1,12 +1,12 @@
 {
-    "name": "nombre-de-tu-proyecto",
+    "name": "node-express-server", 
     "version": "1.0.0",
     "description": "Este proyecto es un servidor básico utilizando Node.js y Express",
     "main": "index.js",
     "scripts": {
         "test": "echo \"Error: no test specified\" && exit 1"
     },
-    "author": "",
+    "author": "josiel-oliveira",
     "license": "ISC",
     "dependencies": {
         "express": "^4.17.1"
