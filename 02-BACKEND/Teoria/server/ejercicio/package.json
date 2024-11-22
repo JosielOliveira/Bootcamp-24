@@ -1,6 +1,7 @@
 {
 	"name": "fcc-learn-npm-package-json",
-	"author": "josiel-oliveira",
+    "version": "1.2.0",
+    "author": "josiel-oliveira",
 	"description": "Este proyecto es un servidor básico utilizando Node.js y Express",
 	"keywords": ["node", "express", "freecodecamp"],
 	"dependencies": {
