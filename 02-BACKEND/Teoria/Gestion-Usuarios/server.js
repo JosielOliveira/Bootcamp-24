@@ -1,6 +1,7 @@
 const express = require('express') // importando el modulo de express 
 const app = express() // Creamos una instancia de express
 const userRouter = require('./routes/users') // importamos el archivo de rutas
+const productRouter = require('./routes/products')
 
 // Middleware para que express pueda leer el body de las peticiones
 // Middleware para validar la cabecera x-api-key
