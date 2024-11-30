@@ -11,6 +11,12 @@
     "marca": "Samsung"
   },
   {
+    "id": 2,
+    "name": "Bufanda",
+    "precio": 19,
+    "marca": "Zeus"
+  },
+  {
     "name": "Auriculares",
     "precio": 60,
     "id": 4
