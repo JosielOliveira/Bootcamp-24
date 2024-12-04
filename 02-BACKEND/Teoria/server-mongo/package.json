@@ -1,5 +1,5 @@
 {
-  "name": "02-backend",
+  "name": "mi-servidor-mongodb",
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
@@ -7,10 +7,11 @@
   },
   "author": "",
   "license": "ISC",
-  "description": "",
+  "description": "Este es mi primer servidor mongodb. Estoy aprendiendo a usar mongodb con nodejs",
   "dependencies": {
     "dotenv": "^16.4.7",
     "express": "^4.21.1",
-    "mongodb": "^6.11.0"
+    "mongodb": "^6.11.0",
+    "mongoose": "^8.8.3"
   }
 }
