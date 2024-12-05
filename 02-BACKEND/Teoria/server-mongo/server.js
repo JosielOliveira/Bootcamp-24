@@ -14,4 +14,3 @@ server.use('/users', userRoutes)
 server.listen(3000, () => {
     console.log('EL SERVIDOR SE INICIO CORRECTAMENTE')
 })
-
