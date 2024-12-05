@@ -1,3 +1,2 @@
-node_modules    // ignore node_modules directory (for npm packages)
-.env             // ignore env directory (for environment variables) 
-package        // ignore packages directory (for yarn packages)
+node_modules
+.env

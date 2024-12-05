@@ -1,13 +1,15 @@
-const mongoose = require('mongoose'); // Importa el módulo mongoose
+const mongoose = require('mongoose')
 
-// Define un esquema para el modelo
-const UserSchema = new mongoose.Schema({
-    name: String,
-    email: String,
-    age: Number
-});
+const userSchema = new mongoose.Schema(
+    {
+        name: { type: String, required: true },
+        email: { type: String, required: true, unique: true },
+        password: { type: String, required: true },
 
-const User = mongoose.model('User', UserSchema); // Crea el modelo
+    }
+)
 
-// Exporta el modelo
-module.exports = mongoose.model('User', UserSchema);
+
+const User = mongoose.model('User', userSchema)
+
+module.exports = User

@@ -1,25 +1,17 @@
-const express = require('express');
-const { getCollection } = require('./config/db'); // Asegúrate de que la ruta sea correcta
+const express = require('express')
+const connectDB = require('./config/db')
+const userRoutes = require('./routes/users')
 require('dotenv').config();
 
-const app = express();
-const port = process.env.PORT || 3000;
+const server = express()
 
-app.get('/', async (req, res) => {
-    try {
-        const collection = await getCollection();
-        const documento = await collection.findOne({});
-        if (documento) {
-            res.json(documento);
-        } else {
-            res.status(404).send('No se encontró ningún documento');
-        }
-    } catch (error) {
-        console.error(error);
-        res.status(500).send('Error al conectar a la base de datos');
-    }
-});
+connectDB()
 
-app.listen(port, () => {
-    console.log(`Servidor escuchando en http://localhost:${port}`);
-});
+
+server.use(express.json())
+server.use('/users', userRoutes)
+
+server.listen(3000, () => {
+    console.log('EL SERVIDOR SE INICIO CORRECTAMENTE')
+})
+
