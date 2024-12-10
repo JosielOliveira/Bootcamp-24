@@ -3,7 +3,7 @@ const jwt = require('jsonwebtoken'); // Asegúrate de tener instalado el paquete
 
 const authMiddleware = (req, res, next) => { // Middleware para verificar el token de autenticación
     // Obtener el token del encabezado de la solicitud
-    const token = req.header('x-auth-token');
+    const token = req.header('x-auth-token'); // Obtiene el token del encabezado de la solicitud 
 
     // Verificar si no hay token
     if (!token) { // Comprueba si no hay token

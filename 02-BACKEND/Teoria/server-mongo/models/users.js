@@ -1,30 +1,31 @@
-// añade la funcionalidad de encriptar la contraseña antes de guardarla en la base de datos
-const mongoose = require('mongoose') // 
-
-const userSchema = new mongoose.Schema( //
+const mongoose = require('mongoose')
+const bcrypt = require('bcryptjs')
+const userSchema = new mongoose.Schema(
     {
-        name: { type: String, required: true }, 
-        email: { type: String, required: true, unique: true }, 
-        password: { type: String, required: true },
+        name: { type: String, required: true },
+        email: { type: String, required: true, unique: true },
+        password: {
             type: String,
             required: true,
-            minlength: 8,
+            minLength: [6, 'La contraseña debe tener al menos 6 caracteres']
+        },
+
     }
 )
 
-userSchema.pre('save', async function (next) {  //función que se ejecuta antes de guardar el usuario en la base de datos 
-    if (!this.isModified('password')) {  //comprueba si la contraseña ha sido modificada 
-        return next()  //si la contraseña no ha sido modificada, no se encripta 
-    }
-    this.password = await bcrypt.hash(this.password, 12) //definimos el nivel de encriptación de la contraseña 
-    next() //continua con el proceso de guardado 
+userSchema.pre('save', async function name(next) {
+    if (!this.isModified('password')) return next()
+    const salt = await bcrypt.genSalt(10)
+    this.password = await bcrypt.hash(this.password, salt)
+    next()
 })
 
-// Método para validar la contraseña
-userSchema.methods.isValidPassword = async function (password) { //método para comparar la contraseña ingresada con la contraseña encriptada en la base de datos 
-    return await bcrypt.compare(password, this.password); //compara las contraseñas 
-};
 
-const User = mongoose.model('User', userSchema) //crea el modelo de usuario 
+userSchema.methods.matchPassword = async (password) => {
+    return await bcrypt.compare(password, this.password)
+}
+
+
+const User = mongoose.model('User', userSchema)
 
 module.exports = User
