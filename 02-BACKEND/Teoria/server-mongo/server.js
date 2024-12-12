@@ -18,7 +18,6 @@ server.use('/auth', authRouter)
 server.use('/products', productRouter)
 server.use('/orders', orderRouter)
 
-server.listen(3000, () => {
+server.listen(3002, () => {
     console.log('EL SERVIDOR SE INICIO CORRECTAMENTE')
-})
-
+}) 
