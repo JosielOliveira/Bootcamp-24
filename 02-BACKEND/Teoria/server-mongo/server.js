@@ -1,19 +1,24 @@
-const express = require('express');
-const connectDB = require('./config/db');
-const authRoutes = require('./routes/auth');
-const orderRoutes = require('./routes/orders');
-require('dotenv').config(); // Cargar variables de entorno desde el archivo .env
+const express = require('express')
+const connectDB = require('./config/db')
+const userRoutes = require('./routes/users')
+const authRouter = require('./routes/auth')
+const productRouter = require('./routes/products')
+const orderRouter = require('./routes/orders')
 
-const server = express();
+require('dotenv').config();
 
-connectDB();
+const server = express()
 
-server.use(express.json());
-server.use('/auth', authRoutes);
-server.use('/orders', orderRoutes);
+connectDB()
 
-const PORT = process.env.PORT || 3002; // Usar la variable de entorno PORT si está definida
 
-server.listen(PORT, () => {
-    console.log(`EL SERVIDOR SE INICIO CORRECTAMENTE EN EL PUERTO ${PORT}`);
-});
+server.use(express.json())
+server.use('/users', userRoutes)
+server.use('/auth', authRouter)
+server.use('/products', productRouter)
+server.use('/orders', orderRouter)
+
+server.listen(3000, () => {
+    console.log('EL SERVIDOR SE INICIO CORRECTAMENTE')
+})
+

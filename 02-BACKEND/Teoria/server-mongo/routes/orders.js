@@ -1,19 +1,12 @@
-const express = require('express');
-const { createOrder, getOrders, getOrderById, deleteOrder } = require('../controllers/orderController');
-const authMiddleware = require('../middleware/authMiddleware');
+const express = require('express')
 
-const router = express.Router();
+const { createOrder, getOrder, udpateOrder } = require('../controllers/orders')
 
-// Ruta para crear un nuevo pedido
-router.post('/', authMiddleware, createOrder);
+const router = express.Router()
 
-// Ruta para obtener todos los pedidos
-router.get('/', authMiddleware, getOrders);
 
-// Ruta para obtener un pedido por ID
-router.get('/:id', authMiddleware, getOrderById);
+router.post('/', createOrder)
+router.get('/:id', getOrder)
+router.put('/:id', udpateOrder)
 
-// Ruta para eliminar un pedido por ID
-router.delete('/:id', authMiddleware, deleteOrder);
-
-module.exports = router;
+module.exports = router
