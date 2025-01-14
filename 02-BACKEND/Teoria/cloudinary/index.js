@@ -7,6 +7,7 @@ import { v2 as cloudinary } from 'cloudinary';
         cloud_name: 'dpcqszmtt', 
         api_key: '238236757456745', 
         api_secret: 'BN3-I5YJuqmKG-oE_N6McpoPNDM' // Click 'View API Keys' above to copy your API secret
+        api_secret: '<your_api_secret>' // Click 'View API Keys' above to copy your API secret
     });
     
     // Upload an image
