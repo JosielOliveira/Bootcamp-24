@@ -1,8 +1,9 @@
-# React + Vite
+# PROYECTO REACT
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+--> Construir una lista de tareas donde se puedan añadir nuevas tareas como usuario 
 
-Currently, two official plugins are available:
+--> Usar useState para manejar un array de tareas. 
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+--> Crea una aplicación en React que muestre una lista de productos en forma de tarjetas. Cada tarjeta debe mostrar el nombre, precio. Además, la aplicación debe: Usar un estado (useState) para manejar los productos. Utilizar un componente TarjetaProducto que reciba las props correspondientes para renderizar un producto. Pasar la lista de productos como una prop a un componente de lista (ListaProductos). 
+
+Usar children para personalizar el diseño del contenedor que muestra las tarjetas.
