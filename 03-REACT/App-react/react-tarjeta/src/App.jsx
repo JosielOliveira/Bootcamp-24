@@ -1,12 +1,26 @@
+import { useState, useEffect } from 'react'
+import ListaProductos from './components/ListaProductos'
 import './index.css'
-import Tarjeta from './components/Tarjeta'
 
 function App() {
+  const [productos, ] = useState([
+    { nombre: 'Producto 1', precio: 100 },
+    { nombre: 'Producto 2', precio: 200 },
+  ])
+
+  useEffect(() => {
+    console.log('Componente montado o actualizado')
+    return () => {
+      console.log('Componente desmontado')
+    }
+  }, [productos])
+
   return (
     <div className="App">
-      <h1>Proyecto REACT-COMPONENTS</h1>
-      <Tarjeta titulo="Tarjeta 1" descripcion="Esta es la descripción de la tarjeta 1." />
-      <Tarjeta titulo="Tarjeta 2" descripcion="Esta es la descripción de la tarjeta 2." />
+      <h1>Lista de Productos</h1>
+      <ListaProductos productos={productos}>
+        <p>Personaliza el diseño aquí</p>
+      </ListaProductos>
     </div>
   )
 }
